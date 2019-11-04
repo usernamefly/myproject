@@ -1,0 +1,19 @@
+@charset "utf-8";
+html,body,div,p,form,label,ul,li,dl,dt,dd,ol,img,button,b,em,strong,small,h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding:0;
+    border:0;
+    list-style:none;
+    font-style:normal;
+}
+body,html{
+    font-family:SimHei,'Helvetica Neue',Arial,'Droid Sans',sans-serif,'微软雅黑';
+    font-size:26.67vw;
+    color:#333;
+    background-color:white;
+    width: 100%;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+

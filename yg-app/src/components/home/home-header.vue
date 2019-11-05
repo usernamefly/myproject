@@ -1,17 +1,21 @@
 <template>
     <div class="home-head">
-        <p></p><input type="text" :value="val"><p>消息</p>
+        <p></p><input type="text" :value="vall"><p>消息</p>
     </div>
 </template>
 
 <script>
     export default {
         name: "home-header",
+        props:["data"],
         data(){
             return{
-                val:"11.11提前购 抢370元优惠券"
+                vall:"11.11提前购 抢370元优惠券",
             }
-        }
+        },
+        /*beforeMount() {
+            console.log(data,tid);
+        }*/
     }
 </script>
 

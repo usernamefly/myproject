@@ -1,15 +1,9 @@
 <template>
-    <yg-home></yg-home>
+    <router-view></router-view>
 </template>
-
 <script>
-import home from './views/home'
-
 export default {
   name: 'app',
-  components: {
-    "yg-home":home,
-  }
 }
 </script>
 

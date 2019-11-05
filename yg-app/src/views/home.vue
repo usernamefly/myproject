@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <home-header class="home-head"></home-header>
+    <div v-if="homeInfo">
+        <home-header class="home-head" :data="homeInfo"></home-header>
         <home-top class="home-top"></home-top>
-        <home-middle class="home-middle"></home-middle>
+        <home-middle class="home-middle" :data="homeInfo.heads"></home-middle>
     </div>
 </template>
 
@@ -28,9 +28,13 @@
             /**
              * 页面的数据加载
              **/
-            async _initPageData() {
-                let data = await homeApi.getHomeInfoByUserId()
-                this.homeInfo = data
+            _initPageData() {
+                homeApi.getHomeInfoByUserId(data => {
+                    // eslint-disable-next-line no-console
+                    this.homeInfo = data;
+                    // eslint-disable-next-line no-console
+                    console.log(this.homeInfo.heads);
+                })
             },
         },
         beforeMount () {

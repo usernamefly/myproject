@@ -1,21 +1,13 @@
 <template>
-    <div>
-        <home-middle-s class="home-small-m"></home-middle-s>
-        <home-middle-s class="home-small-m"></home-middle-s>
-        <home-middle-s class="home-small-m"></home-middle-s>
-        <home-middle-s class="home-small-m"></home-middle-s>
-
+    <div v-if="data">
+        <img class="home-small-m"  v-for="bg in data" :key="bg" :src="bg">
     </div>
 </template>
 
 <script>
-    import middle from "./small-components/home-middle-s"
     export default {
         name: "home-middle",
-        props:["n"],
-        components:{
-            "home-middle-s":middle,
-        }
+        props:["data"],
     }
 </script>
 

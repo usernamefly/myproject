@@ -1,8 +1,19 @@
 <template>
     <div v-if="homeInfo">
-        <home-header class="home-head" :data="homeInfo"></home-header>
+        <home-header class="home-head"></home-header>
         <home-top class="home-top"></home-top>
         <home-middle class="home-middle" :data="homeInfo.heads"></home-middle>
+        <div class="home-middle-bot" v-if="homeInfo.middle">
+            <home-middle-bot :data="homeInfo.middle"></home-middle-bot>
+        </div>
+        <div class="home-middle-bots" v-if="homeInfo.middle_bot">
+            <home-middle-bots :data="homeInfo.middle_bot"></home-middle-bots>
+        </div>
+        <div class="home-middle-botss" v-if="homeInfo">
+            <span>{{homeInfo.rename}}</span>
+            <home-middle-botss :data="homeInfo.reimg"></home-middle-botss>
+        </div>
+        <home-footer class="home-foot" :data_o="homeInfo.foots"></home-footer>
     </div>
 </template>
 
@@ -10,13 +21,22 @@
     import header from "../components/home/home-header"
     import top from "../components/home/home-top"
     import middle from "../components/home/home-middle"
+    import footer from "../components/home/home-footer"
+    import mbot from "../components/home/home-middle-bot"
+    import mbots from "../components/home/home-middle-bots"
+    import mbotss from "../components/home/home-middle-botss"
+
     import homeApi from '../apis/homeApi'
     export default {
         name: "home",
         components:{
             "home-header":header,
             "home-top":top,
-            "home-middle":middle
+            "home-middle":middle,
+            "home-footer":footer,
+            "home-middle-bot":mbot,
+            "home-middle-bots":mbots,
+            "home-middle-botss":mbotss
         },
         data () {
             return {
@@ -32,8 +52,6 @@
                 homeApi.getHomeInfoByUserId(data => {
                     // eslint-disable-next-line no-console
                     this.homeInfo = data;
-                    // eslint-disable-next-line no-console
-                    console.log(this.homeInfo.heads);
                 })
             },
         },

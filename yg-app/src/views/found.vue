@@ -1,12 +1,10 @@
 <template>
-    <div >
-
-    </div>
+    <div class="fou"><h1>发现页</h1></div>
 </template>
 
 <script>
     export default {
-        name: "home-foot-bot"
+        name: "found"
     }
 </script>
 

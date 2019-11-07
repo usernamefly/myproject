@@ -20,7 +20,7 @@ let router = new VueRouter({
             path: '/main',
             component: main,
             children: [
-                {   path: '',component: home  },
+                {   path: '',component: home },
                 {   path: 'cla', component: cla  },
                 {   path: 'cart', component: cart  },
                 {   path: 'sale', component: sale  },

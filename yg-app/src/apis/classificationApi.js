@@ -1,5 +1,5 @@
 import { BASEURL } from '../commons/Config'
-const CLURL = `${BASEURL}/classification`
+const CLURL = `${BASEURL}/cla`
 
 export default {
     /**

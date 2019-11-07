@@ -13,7 +13,8 @@
                 this.$router.push("/");
             },
             show(){
-
+                this.$eventBus.$emit("bot","block");
+                /*this.$store.dispatch('DIDOS','block');*/
             }
         }
     }
@@ -38,6 +39,7 @@
         background-repeat: no-repeat;
         box-sizing: border-box;
         height: 0.3rem;
+        font-size: 0.13rem;
         border: 0.015rem solid gainsboro;
         margin-top: 0.07rem;
         color: gray;

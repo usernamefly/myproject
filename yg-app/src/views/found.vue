@@ -1,9 +1,9 @@
 <template>
-    <div class="fou">
+    <div class="fou" v-if="fouInfo">
         <fou-head></fou-head>
         <fou-headb></fou-headb>
         <fou-head-s></fou-head-s>
-        <fou-footer></fou-footer>
+        <fou-footer :data="fouInfo"></fou-footer>
     </div>
 </template>
 

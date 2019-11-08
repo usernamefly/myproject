@@ -1,12 +1,12 @@
 import { BASEURL } from '../commons/Config'
-const CARTURL = `${BASEURL}/api/homeinfo`
+const BAIURL = `${BASEURL}/bai`
 
 export default {
     /**
      * 获取店铺的信息
      */
-    async getCartInfoByUserId () {
-        let res = await fetch(CARTURL)
+    async getBaiInfoByUserId () {
+        let res = await fetch(BAIURL)
         let data = await res.json()
         return data
     }

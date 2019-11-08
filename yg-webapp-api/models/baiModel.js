@@ -1,0 +1,40 @@
+module.exports={
+    getNews(){
+        let data=[
+            {"pic":"http://39.107.245.176/images/baili/101301590_01_mb.jpg",
+                "desc":"BELLE/百丽2019冬新牛剖层皮革/皮革女骑士长靴...",
+            "price":"￥759","price1":"￥2299"},
+            {"pic":"http://39.107.245.176/images/baili/101301590_01_mb.jpg",
+                "desc":"BELLE/百丽2019冬新牛剖层皮革/皮革女骑士长靴...",
+                "price":"￥759","price1":"￥2299"},
+            {"pic":"http://39.107.245.176/images/baili/101299089_01_mb.jpg",
+                "desc":"BELLE/百丽2019冬新款摔纹牛皮革女马丁靴90321DD9",
+                "price":"￥709","price1":"￥698"},
+            {"pic":"http://39.107.245.176/images/baili/101270183_01_mb.jpg",
+                "desc":"BELLE/百丽2019冬新款摔纹牛皮革女马丁皮靴(绒...",
+                "price":"￥709","price1":"￥698"},
+            {"pic":"http://39.107.245.176/images/baili/101299187_01_mb.jpg",
+                "desc":"BELLE/百丽2019冬新款摔纹牛皮革女马丁皮短靴93181DZ9",
+                "price":"￥859","price1":"￥1599"},
+            {"pic":"http://39.107.245.176/images/baili/101304809_01_mb.jpg",
+                "desc":"BELLE/百丽2019冬新商场同款牛剖层皮革女雪地靴保暖靴...",
+                "price":"￥539","price1":"￥1099"},
+            {"pic":"http://39.107.245.176/images/baili/101297812_01_mb.jpg",
+                "desc":"BELLE/百丽2019冬新牛皮革女前拉链皮靴短靴19678DD9",
+                "price":"￥709","price1":"￥1499"},
+            {"pic":"http://39.107.245.176/images/baili/101301590_01_mb.jpg",
+                "desc":"BELLE/百丽2019冬新牛皮革/牛剖层皮革女皮简约长靴...",
+                "price":"￥899","price1":"￥1899"},
+            {"pic":"http://39.107.245.176/images/baili/101276478_01_mb.jpg",
+                "desc":"BELLE/百丽2019冬新商场同款前拉链皱漆女皮短靴(单...",
+                "price":"￥869","price1":"￥1499"},
+            {"pic":"http://39.107.245.176/images/baili/101270183_01_mb.jpg",
+                "desc":"BELLE/百丽2019冬新牛皮革/牛剖层皮革女皮简约长靴...",
+                "price":"￥769","price1":"￥1599"},
+            {"pic":"http://39.107.245.176/images/baili/101299089_01_mb.jpg",
+                "desc":"BELLE/百丽2019冬新商场同款前拉链皱漆女皮短靴(单...",
+                "price":"￥539","price1":"￥1599"}
+        ]
+        return data;
+    }
+}

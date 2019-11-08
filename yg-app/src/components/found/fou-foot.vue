@@ -1,31 +1,17 @@
 <template>
-    <div class="fou-foot">
-        <div class="fou-foot-bot">
-            <p>11.11提前购 抢370元券</p>
-            <img src="../../assets/images/found/1572501430941.jpg">
-            <p>鞋类:无限制30、358-60、598-130优惠券 运动:299-20、499-50、799-80优惠券</p>
-        </div>
-        <div class="fou-foot-bot">
-            <p>秋冬穿搭法则再差的身材一双靴子就能拯救</p>
-            <img src="../../assets/images/found/1543375837774.jpg">
-            <p>2018.11.28</p>
-        </div>
-        <div class="fou-foot-bot">
-            <p>【更新】年末轰趴吸睛穿搭|8套礼盒一键搞定！</p>
-            <img src="../../assets/images/found/1545794198391.gif">
-            <p>2018.12.26</p>
-        </div>
-        <div class="fou-foot-bot">
-            <p>刘雯、鹿晗、王嘉尔、青春同款原来都在这里</p>
-            <img src="../../assets/images/found/1541495279892.jpg">
-            <p>2018.11.8</p>
+    <div class="fou-foot" v-if="data">
+        <div class="fou-foot-bot" v-for="(val,index) in data" :key="index">
+            <p>{{val.title}}</p>
+            <img :src="val.pic">
+            <p>{{val.desc}}</p>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "fou-foot"
+        name: "fou-foot",
+        props:["data"]
     }
 </script>
 
@@ -33,6 +19,7 @@
 .fou-foot{
     width: 100%;
     background-color: rgb(238,238,238);
+    margin-bottom: 0.5rem;
 }
 .fou-foot-bot{
     background-color:white;
@@ -58,5 +45,4 @@
     padding:0.05rem 0;
     color: rgb(150,150,150);
  }
-
 </style>

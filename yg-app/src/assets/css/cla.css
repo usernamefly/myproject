@@ -39,6 +39,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 0.45rem;
+    margin-bottom: 0.5rem;
 }
 .cla-left{
     width: 1rem;

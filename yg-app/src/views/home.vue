@@ -13,7 +13,6 @@
             <span>{{homeInfo.rename}}</span>
             <home-middle-botss :data="homeInfo.reimg"></home-middle-botss>
         </div>
-        <home-footer class="home-foot" :data_o="homeInfo.foots"></home-footer>
     </div>
 </template>
 
@@ -21,7 +20,6 @@
     import header from "../components/home/home-header"
     import top from "../components/home/home-top"
     import middle from "../components/home/home-middle"
-    import footer from "../components/home/home-footer"
     import mbot from "../components/home/home-middle-bot"
     import mbots from "../components/home/home-middle-bots"
     import mbotss from "../components/home/home-middle-botss"
@@ -33,7 +31,6 @@
             "home-header":header,
             "home-top":top,
             "home-middle":middle,
-            "home-footer":footer,
             "home-middle-bot":mbot,
             "home-middle-bots":mbots,
             "home-middle-botss":mbotss

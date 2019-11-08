@@ -1,14 +1,16 @@
 <template>
-    <router-view></router-view>
-    <!--<home-footer></home-footer>-->
+    <div>
+        <router-view></router-view>
+        <yg-footer></yg-footer>
+    </div>
 </template>
 
 <script>
-    /*import footer from "../components/home/home-footer"*/
+    import footer from "../components/commons/yg-foot"
     export default {
         name: "vmain",
         components:{
-            /*"home-footer":footer,*/
+            "yg-footer":footer,
         }
     }
 </script>

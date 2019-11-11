@@ -22,6 +22,7 @@
                 }
             },
 
+
         }
     }
 </script>
@@ -40,7 +41,6 @@
 }
 .update>p{
     width: 0.3rem;
-    border-radius: 0.05rem 0.05rem;
     height: 0.25rem;
     text-align: center;
     background-color: gainsboro;

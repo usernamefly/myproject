@@ -30,6 +30,7 @@
     font-size: 0.15rem;
     background-color: rgb(248,248,248);
    /* position: fixed;*/
+    margin-top:-0.6rem;
     justify-content: space-between;
     bottom: 0;
     display: flex;

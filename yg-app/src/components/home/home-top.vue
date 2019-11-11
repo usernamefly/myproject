@@ -1,10 +1,12 @@
 <template>
-    <div calss="home-top"></div>
+    <div class="home-top-con">
+        <span></span>
+    </div>
 </template>
 
 <script>
     export default {
-        name: "home-top"
+        name: "home-top",
     }
 </script>
 

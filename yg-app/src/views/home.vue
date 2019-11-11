@@ -1,13 +1,18 @@
 <template>
     <div v-if="homeInfo">
         <home-header class="home-head"></home-header>
-        <home-top class="home-top"></home-top>
+        <transition mode="out-in" name="v">
+            <div :is="flag1">
+                <home-top class="home-top" @click="flag='home-top'"></home-top>
+            </div>
+        </transition>
+
         <home-middle class="home-middle" :data="homeInfo.heads"></home-middle>
         <div class="home-middle-bot" v-if="homeInfo.middle">
             <home-middle-bot :data="homeInfo.middle"></home-middle-bot>
         </div>
-        <div class="home-middle-bots" v-if="homeInfo.middle_bot">
-            <home-middle-bots :data="homeInfo.middle_bot"></home-middle-bots>
+        <div v-if="homeInfo.middle_bot">
+            <home-middle-bots class="home-middle-bots" :data="homeInfo.middle_bot"></home-middle-bots>
         </div>
         <div class="home-middle-botss" v-if="homeInfo">
             <span>{{homeInfo.rename}}</span>
@@ -38,7 +43,8 @@
         data () {
             return {
                 flag: true,
-                homeInfo: [] // 页面的数据模型
+                homeInfo: [], // 页面的数据模型,
+                flag1:"home-top"
             }
         },
         methods: {

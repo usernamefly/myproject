@@ -5,7 +5,7 @@
             <p class="cla-right-title">{{val.title}}</p>
             <p class="cla-right-con" v-for="(key,index1) in val.con" :key="index1">
                 <img :src="key.pic"><br/>
-                <span>{{key.xpai}}</span>
+                <span><a href="#/baili">{{key.xpai}}</a></span>
             </p>
         </div>
     </div>

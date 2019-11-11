@@ -20,9 +20,9 @@
            "cart-sigsel":sigsel,
            "cart-rig":pro
         },
-        beforeMount() {
+        /*beforeMount() {
             console.log(this.data);
-        }
+        }*/
     }
 </script>
 

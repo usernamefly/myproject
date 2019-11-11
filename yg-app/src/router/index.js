@@ -3,16 +3,27 @@ import home from '../views/home'
 import main from '../views/main'
 import cla from '../views/classification'
 import cart from '../views/cart'
-import sale from '../views/SalesVolume'
+import login from '../views/login'
 import  baili from '../views/baili'
 import  fou from '../views/found'
 import detail from '../views/detail'
 import personal from '../views/Personal'
 import VueRouter from 'vue-router'
+import logins from "../components/login/logins"
+import logregister from "../components/login/log-register"
 Vue.use(VueRouter)
 
 let router = new VueRouter({
     routes: [
+        {   path: '/login', component: login,
+            children:[
+                {path: '/login', redirect: logins},
+                {path:'logins',component:logins},
+                {path:'logregister',component:logregister}
+            ]
+        },
+        {   path: '/detail', component: detail   },
+        {   path: '/baili', component: baili   },
         {
             path: '/',redirect: '/main'
         },
@@ -23,11 +34,8 @@ let router = new VueRouter({
                 {   path: '/',component: home },
                 {   path: 'cla', component: cla  },
                 {   path: 'cart', component: cart  },
-                {   path: 'sale', component: sale  },
-                {   path: 'detail', component: detail    },
-                {   path: 'personal', component: personal    },
-                {   path: 'baili', component: baili    },
-                {   path: 'fou', component: fou    },
+                {   path: 'personal', component: personal   },
+                {   path: 'fou', component: fou   },
             ]
         }
     ]

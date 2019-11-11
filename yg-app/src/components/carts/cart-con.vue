@@ -17,9 +17,9 @@
             "cart-title":title,
             "cart-pro":product
         },
-        beforeMount() {
+       /* beforeMount() {
             console.log(this.data);
-        }
+        }*/
     }
 </script>
 

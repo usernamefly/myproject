@@ -1,6 +1,6 @@
 <template>
     <div class="per-foot">
-        <div><span>12345678901 | 退出</span><span><span></span>电脑版 客户端 微信</span></div>
+        <div><span>12345678901 | <a href="#/login/logins">退出</a></span><span><span></span>电脑版 客户端 微信</span></div>
         <p>百丽国际旗下购物网站<br/>Copyright &copy; 2011-2018 优购 m.yougou.com</p>
     </div>
 </template>
@@ -27,6 +27,10 @@
 .per-foot>div{
     display: flex;
     justify-content: space-between;
+}
+.per-foot>div>span>a{
+    color: gray;
+    text-decoration: none;
 }
 .per-foot>p{
     margin-top: 0.2rem;

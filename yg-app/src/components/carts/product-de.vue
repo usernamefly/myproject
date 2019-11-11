@@ -2,13 +2,13 @@
     <div class="cart-pro-right">
         <p>{{val.desc}}</p>
         <div class="cart-img">
-            <p><img :src="val.pic"><span>秒杀</span></p>
+            <p><img :src="val.pic"><span v-if="index==3||index==2">秒杀</span></p>
             <div class="cart-desc">
                 <p>颜色：{{val.color}} <span>￥{{val.price}}</span></p>
                 <p>尺码：{{val.size}}</p>
                 <p>发货：{{val.express1}}</p>
                 <p><cart-upd></cart-upd><img src="../../assets/images/cart/del.png"></p>
-                <p class="cyin">仅剩1件<img src="../../assets/images/cart/arrowu.png"></p>
+                <p class="cyin" v-if="index==0">仅剩1件<img src="../../assets/images/cart/arrowu.png"></p>
             </div>
         </div>
     </div>
@@ -22,10 +22,6 @@
         components:{
             "cart-upd":update
         },
-beforeMount() {
-}
-
-
     }
 </script>
 

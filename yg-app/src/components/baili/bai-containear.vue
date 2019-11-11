@@ -1,11 +1,11 @@
 <template>
     <div class="bai-con" v-if="data">
         <img src="../../assets/images/baili/1572506374914.jpg">
-        <div class="bai-con-con" v-for="(val,index) in data" :key="index">
+        <a href="#/detail" class="bai-con-con" v-for="(val,index) in data" :key="index">
             <img :src="val.pic">
             <p class="abi-desc">{{val.desc}}</p>
             <p class="abi-price">{{val.price}}<span>{{val.price1}}</span></p>
-        </div>
+        </a>
     </div>
 </template>
 
@@ -13,9 +13,6 @@
     export default {
         name: "bai-containear",
         props:["data"],
-        beforeMount() {
-            console.log(this.data)
-        }
     }
 </script>
 
@@ -28,9 +25,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 0.5rem;
 }
 .bai-con-con{
+    display: inline-block;
     width: 49%;
+    color: black;
+    text-decoration: none;
     font-size: 0.13rem;
     background-color: white;
     margin-bottom:0.08rem;

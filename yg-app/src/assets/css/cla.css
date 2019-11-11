@@ -95,3 +95,7 @@
 .cla-right-con>img{
     width: 70%;
 }
+.cla-right-con>span>a{
+    color: black;
+    text-decoration: none;
+}
